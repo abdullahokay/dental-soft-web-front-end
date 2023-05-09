@@ -1,13 +1,15 @@
 <template>
-    <v-col class="d-flex justify-end pa-0">
-      <div style="width: 82.5%; padding: 0px">
-        <AppBar />
-        <HelloWorld msg="Welcome to Your Vue.js App" />
+  <v-row class="d-flex flex-row-reverse" no-gutters>
+    <v-col cols="10" class="pa-0">
+      <div>
+        <AppBar class="ma-0" />
+        <HelloWorld class="ma-0" msg="Welcome to Your Vue.js App" />
       </div>
     </v-col>
-    <v-col>
+    <v-col cols="2" class="d-flex justify-center pa-0">
       <VerticalNavBar />
     </v-col>
+  </v-row>
 </template>
 
 <script>

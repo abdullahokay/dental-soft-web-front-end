@@ -1,6 +1,6 @@
 <template>
     <div style="position: sticky; top: 0;">
-        <v-card class="d-flex align-center" color="white" height="120" flat rounded="0">
+        <v-card class="d-flex align-center" color="white" height="6.55rem" flat rounded="0">
             <v-toolbar class="toolbar" permanent density="default" app>
                 <v-toolbar-title>
                     <h3>Welcome Back</h3>
