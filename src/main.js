@@ -11,11 +11,6 @@ import * as labs from "vuetify/labs/components";
 import "material-design-icons-iconfont/dist/material-design-icons.css";
 import "@mdi/font/css/materialdesignicons.css";
 
-//vue-router
-import router from "./router/router";
-
-//vuex
-import store from "./store/store";
 const vuetify = createVuetify({
   components: {
     ...labs,
@@ -48,4 +43,16 @@ const vuetify = createVuetify({
   },
 });
 
-createApp(App).use(vuetify, router, store).mount("#app");
+//vue-router
+import router from "./router/router";
+
+//vuex
+import store from "./store/store";
+
+//vue calendar
+import VCalendar from 'v-calendar';
+import 'v-calendar/style.css';
+
+const app = createApp(App)
+app.use(VCalendar, {})
+app.use(vuetify, router, store).mount("#app");

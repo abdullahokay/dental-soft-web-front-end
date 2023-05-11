@@ -6,7 +6,19 @@
         <CardContainer lass="ma-0" />
       </v-container>
       <v-container>
-        
+        <v-container>
+          <v-row class="justify-center">
+            <v-col cols="9">
+              <DataTable />
+            </v-col>
+            <v-col cols="3">
+              <v-card class="pa-2">
+                <VCalendar view="weekly" class="mb-2" />
+                <v-divider></v-divider>
+              </v-card>
+            </v-col>
+          </v-row>
+        </v-container>
       </v-container>
     </v-main>
   </v-app>
@@ -14,14 +26,16 @@
 
 <script>
 import CardContainer from './components/MainPageCardContainer.vue'
+import DataTable from './components/MainPageDataTable.vue'
 
 import AppBar from './components/AppBar.vue';
 export default {
   name: 'App',
   components: {
+    AppBar,
     CardContainer,
+    DataTable,
     // VerticalNavBar,
-    AppBar
   }
 }
 </script>
