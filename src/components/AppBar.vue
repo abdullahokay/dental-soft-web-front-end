@@ -16,7 +16,7 @@
                 <v-list-item prepend-icon="mdi-cog" value="settings" class="nav-list-item">Settings</v-list-item>
             </div>
             <v-divider class="vertical-nav-divider"></v-divider>
-            <div class="mt-6 px-5">
+            <div class="mt-7 px-5">
                 <v-list-item prepend-icon="mdi-email" value="inbox" class="nav-list-item">Inbox</v-list-item>
                 <v-list-item prepend-icon="mdi-bell" value="notifications" class="nav-list-item">Notifications</v-list-item>
                 <v-list-item prepend-icon="mdi-badge-account" value="support" class="nav-list-item">Support</v-list-item>

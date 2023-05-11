@@ -2,19 +2,24 @@
   <v-app>
     <AppBar />
     <v-main>
-      <HelloWorld class="ma-0" msg="Welcome to Your Vue.js App" />
+      <v-container>
+        <CardContainer lass="ma-0" />
+      </v-container>
+      <v-container>
+        
+      </v-container>
     </v-main>
   </v-app>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import CardContainer from './components/MainPageCardContainer.vue'
 
 import AppBar from './components/AppBar.vue';
 export default {
   name: 'App',
   components: {
-    HelloWorld,
+    CardContainer,
     // VerticalNavBar,
     AppBar
   }
