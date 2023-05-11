@@ -2,9 +2,7 @@
   <v-app>
     <AppBar />
     <v-main>
-      <v-container>
-        <HelloWorld class="ma-0" msg="Welcome to Your Vue.js App" />
-      </v-container>
+      <HelloWorld class="ma-0" msg="Welcome to Your Vue.js App" />
     </v-main>
   </v-app>
 </template>

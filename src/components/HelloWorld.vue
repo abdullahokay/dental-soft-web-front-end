@@ -1,4 +1,5 @@
 <template>
+  <v-container>
   <div class="hello">
     <img width="300" alt="Vue logo" src="../assets/logo.png"/>
     <h1>{{ msg }}</h1>
@@ -29,6 +30,7 @@
       <li><a href="https://github.com/vuejs/awesome-vue" target="_blank" rel="noopener">awesome-vue</a></li>
     </ul>
   </div>
+  </v-container>
 </template>
 
 <script>

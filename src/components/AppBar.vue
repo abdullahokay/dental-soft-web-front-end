@@ -1,6 +1,6 @@
 <template>
     <v-navigation-drawer location="left" v-model="drawer">
-        <v-list class="nav-list" density="comfortable" nav active-color="#9DDDC8">
+        <v-list class="nav-list" density="comfortable" nav active-color="#2380EA">
             <v-list-item class="home-logo-wrapper">
                 <div class="d-flex justify-center align-center mr-5">
                     <img src="../assets/logo.png" width="90" alt="logo" />
@@ -27,7 +27,7 @@
         <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
         <v-spacer></v-spacer>
         <VExpandTransition>
-            <v-col v-if="searching" lg="3" md="3" sm="3" xs="2">
+            <v-col v-if="searching" class="pa-1" lg="3" md="3" sm="3" xs="2">
                 <v-card flat height="auto" class="d-flex align-center justify-center">
                     <v-text-field prepend-inner-icon="mdi-magnify" density="compact" label="Search" variant="outlined"
                         hide-details="auto" color="black" single-line clearable class="align-self-center"></v-text-field>
@@ -36,12 +36,19 @@
         </VExpandTransition>
         <VExpandTransition>
             <v-btn icon @click="searching = !searching">
-                <v-icon size="large">mdi-magnify</v-icon>
+                <v-icon>mdi-magnify</v-icon>
             </v-btn>
         </VExpandTransition>
-        <v-icon size="large" class="mx-2" @change="toggleTheme">mdi-weather-sunny</v-icon>
-        <v-switch direction='vertical' class="theme-switch" inset hide-details @change="toggleTheme"></v-switch>
-        <v-icon size="large" class="mx-2" @change="toggleTheme">mdi-weather-night</v-icon>
+        <v-btn icon @click="toggleTheme">
+                <Transition>
+                    <template v-if="this.theme.global.current.value.dark">
+                        <v-icon>mdi-weather-sunny</v-icon>
+                    </template>
+                    <template v-else>
+                        <v-icon >mdi-weather-night</v-icon>
+                    </template>
+                </Transition>
+        </v-btn>
     </v-app-bar>
 </template>
   
