@@ -1,26 +1,23 @@
 <template>
-  <v-row class="d-flex flex-row-reverse" no-gutters>
-    <v-col cols="10" class="pa-0">
-      <div>
-        <AppBar class="ma-0" />
+  <v-app>
+    <AppBar />
+    <v-main>
+      <v-container>
         <HelloWorld class="ma-0" msg="Welcome to Your Vue.js App" />
-      </div>
-    </v-col>
-    <v-col cols="2" class="d-flex justify-center pa-0">
-      <VerticalNavBar />
-    </v-col>
-  </v-row>
+      </v-container>
+    </v-main>
+  </v-app>
 </template>
 
 <script>
 import HelloWorld from './components/HelloWorld.vue'
-import VerticalNavBar from './components/VerticalNavBar.vue';
+
 import AppBar from './components/AppBar.vue';
 export default {
   name: 'App',
   components: {
     HelloWorld,
-    VerticalNavBar,
+    // VerticalNavBar,
     AppBar
   }
 }
