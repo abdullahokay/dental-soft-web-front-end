@@ -44,10 +44,10 @@ const vuetify = createVuetify({
 });
 
 //vue-router
-import router from "./router/router";
+// import router from "./router/router";
 
 //vuex
-import store from "./store/store";
+// import store from "./store/store.js";
 
 //vue calendar
 import VCalendar from 'v-calendar';
@@ -55,4 +55,4 @@ import 'v-calendar/style.css';
 
 const app = createApp(App)
 app.use(VCalendar, {})
-app.use(vuetify, router, store).mount("#app");
+app.use(vuetify).mount("#app");

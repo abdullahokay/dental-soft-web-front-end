@@ -1,10 +1,10 @@
 <template>
-    <v-col class="card-column">
+    <v-col class="card-column" md="3" lg="3" sm="6">
         <div class="main-page-card-wrapper">
             <v-card class="px-7 py-7">
                 <v-sheet class="d-flex justify-center">
                     <v-sheet class="align-self-center">
-                        <v-btn :color="cardIconBgColor" icon class="mr-6" size="large">
+                        <v-btn :color="cardIconBgColor" icon class="mr-4" size="large">
                             <v-icon size="x-large" :color="cardIconColor">{{ cardIcon }}</v-icon>
                         </v-btn>
                     </v-sheet>
@@ -61,7 +61,7 @@ export default {
 }
 
 main-page-card-wrapper {
-    max-width: 300px;
+    max-width: 300px !important;
 }
 
 /* @media screen and (min-width: 959px) {

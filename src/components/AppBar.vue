@@ -58,7 +58,6 @@ export default {
     data() {
         return {
             drawer: true,
-            logo: require('@/assets/logo.png'),
             searching: false,
         };
     },
