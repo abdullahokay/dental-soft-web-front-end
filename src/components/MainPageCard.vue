@@ -1,7 +1,7 @@
 <template>
     <v-col class="card-column" md="3" lg="3" sm="6">
-        <div class="main-page-card-wrapper">
-            <v-card class="px-7 py-7">
+        <div class="main-page-card-wrapper d-flex justify-center">
+            <v-card class="px-7 py-7" max-width="max-content">
                 <v-sheet class="d-flex justify-center">
                     <v-sheet class="align-self-center">
                         <v-btn :color="cardIconBgColor" icon class="mr-4" size="large">

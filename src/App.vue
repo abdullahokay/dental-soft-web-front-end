@@ -3,51 +3,76 @@
     <AppBar />
     <v-main>
       <v-container>
-        <CardContainer lass="ma-0" />
-      </v-container>
-      <v-container>
         <v-container>
+          <CardContainer lass="ma-0" />
+        </v-container>
+        <v-container class="pa-9">
           <v-row class="justify-center">
-            <v-col cols="9">
-              <DataTable />
-            </v-col>
-            <v-col cols="3">
+            <v-col lg="12">
               <v-card class="pa-2">
-                <VCalendar v-if="this.theme.global.current.value.dark" view="weekly" title-position="left" is-dark />
-                <VCalendar v-else view="weekly" title-position="left" />
+                <v-row class="align-center justify-center py-2" no-gutters>
+                  <div class="d-flex align-center">
+                    <VCalendar v-if="this.theme.global.current.value.dark" view="weekly" title-position="left" is-dark />
+                    <VCalendar v-else view="weekly" title-position="left" />
+                  </div>
+                </v-row>
                 <v-divider class="border-opacity-25 mx-3 my-2"></v-divider>
-                <div>
-                  <div class="d-flex justify-center align-center pa-4 calendar-randevu-wrapper">
-                    <div class="d-flex flex-column text-left ml-4">
+                <v-row no-gutters class="justify-center py-2">
+                  <v-col cols="3">
+                  <v-card class="d-flex justify-center align-center pa-4 calendar-randevu-wrapper" color="blue">
+                    <div class="d-flex flex-column text-left">
                       <div class="text-p text-center">Tue</div>
                       <div class="text-h3 text-left">16</div>
                     </div>
                     <v-spacer></v-spacer>
-                    <div class="d-flex flex-column justify-center text-left mr-4">
+                    <div class="d-flex flex-column justify-center text-left mx-5">
                       <div class="text-h6">Dr. Rita Ora</div>
                       <div class="text-p text-center">Dermatalogist</div>
                       <div class="calendar-randevu-clock">
                         <div class="text-h7 pa-1 text-left font-weight-bold">10:30</div>
                       </div>
                     </div>
-                  </div>
-                  <v-divider class="mx-3 my-2 border-opacity-25"></v-divider>
-                  <div class="d-flex justify-center align-center pa-4 calendar-randevu-wrapper">
-                    <div class="d-flex flex-column text-left ml-4">
+                  </v-card>
+                </v-col>
+                  <v-divider class="mx-3 my-2 border-opacity-25" vertical></v-divider>
+                  <v-col cols="3">
+                    <v-card class="d-flex justify-center align-center pa-4 calendar-randevu-wrapper" color="blue">
+                      <div class="d-flex flex-column text-left">
+                        <div class="text-p text-center">Tue</div>
+                        <div class="text-h3 text-left">16</div>
+                      </div>
+                      <v-spacer></v-spacer>
+                      <div class="d-flex flex-column justify-center text-center mx-5">
+                        <div class="text-h6">Dr. Rita Ora</div>
+                        <div class="text-p text-center">Dermatalogist</div>
+                        <div class="calendar-randevu-clock">
+                          <div class="text-h7 pa-1 text-left font-weight-bold">10:30</div>
+                        </div>
+                      </div>
+                    </v-card>
+                  </v-col>
+                  <v-divider class="mx-3 my-2 border-opacity-25" vertical></v-divider>
+                  <v-col cols="3">
+                  <v-card class="d-flex justify-center align-center pa-4 calendar-randevu-wrapper" color="blue">
+                    <div class="d-flex flex-column text-left">
                       <div class="text-p text-center">Tue</div>
                       <div class="text-h3 text-left">16</div>
                     </div>
                     <v-spacer></v-spacer>
-                    <div class="d-flex flex-column justify-center text-left mr-4">
+                    <div class="d-flex flex-column justify-center text-left mx-5">
                       <div class="text-h6">Dr. Rita Ora</div>
                       <div class="text-p text-center">Dermatalogist</div>
                       <div class="calendar-randevu-clock">
                         <div class="text-h7 pa-1 text-left font-weight-bold">10:30</div>
                       </div>
                     </div>
-                  </div>
-                </div>
+                  </v-card>
+                </v-col>
+                </v-row>
               </v-card>
+            </v-col>
+            <v-col cols="9" lg="12">
+              <DataTable />
             </v-col>
           </v-row>
         </v-container>
