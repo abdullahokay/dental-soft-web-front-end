@@ -1,7 +1,7 @@
 <template>
-    <v-col class="card-column" md="3" lg="3" sm="6">
+    <v-col class="card-column" xl="2" lg="3" md="6" sm="6">
         <div class="main-page-card-wrapper d-flex justify-center">
-            <v-card class="px-7 py-7" max-width="max-content">
+            <v-card class="px-5 py-5">
                 <v-sheet class="d-flex justify-center">
                     <v-sheet class="align-self-center">
                         <v-btn :color="cardIconBgColor" icon class="mr-4" size="large">
@@ -54,19 +54,40 @@ export default {
 <style scoped>
 .v-card {
     border-radius: 15px;
+    width: 100%;
 }
 
 .v-card--variant-elevated {
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
-main-page-card-wrapper {
-    max-width: 300px !important;
+.main-page-card-wrapper {
+    width: 264px !important;
 }
 
-/* @media screen and (min-width: 959px) {
-    .card-column {
-        max-width: 300px;
+@media screen and (max-width: 60rem) {
+    .v-col-sm-6 {
+        max-width: max-content;
     }
-} */
+
+}
+
+@media screen and (min-width: 60rem) and (max-width: 80rem){
+    .v-col-md-6 {
+        max-width: max-content !important;
+    }
+
+}
+
+@media screen and (min-width: 80rem) and (max-width: 88.4375rem) {
+    .v-col-md-6 {
+        max-width: 50%;
+        flex: 0 0 50%;
+    }
+
+    .v-col {
+        display: flex;
+        justify-content: center;
+    }
+}
 </style>

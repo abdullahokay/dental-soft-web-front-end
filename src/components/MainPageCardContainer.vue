@@ -1,7 +1,7 @@
 <template>
-  <div class="hello">
+  <div class="hello d-flex justify-center">
     <v-container>
-      <v-row>
+      <v-row class="justify-center md-justify-space-evenly">
         <card card-icon="mdi-calendar-month" card-icon-bg-color="#EAF4FE" card-icon-color="#2C91ED"
           card-text="Total Booking" card-integer="33" />
         <card card-icon="mdi-calendar-check" card-icon-bg-color="#FEEFEA" card-icon-color="error"
@@ -18,7 +18,7 @@
 <script>
 import card from './MainPageCard.vue';
 export default {
-  name: 'HelloWorld',
+  name: 'CardContainer',
 
   components: {
     card
@@ -51,8 +51,6 @@ a {
   flex-direction: column;
   align-items: center;
 }
-
-
 
 .card-icon-wrapper {
   border-radius: 50%;
@@ -96,5 +94,11 @@ a {
 
 .v-card {
   border-radius: 15px;
+}
+
+@media screen and (min-width: 60rem) and (max-width: 1280px) {
+  .md-justify-space-evenly {
+    justify-content: space-evenly !important;
+  }
 }
 </style>

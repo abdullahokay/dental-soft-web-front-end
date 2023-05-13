@@ -1,7 +1,7 @@
 <template>
-    <v-card class="pa-5">
+    <v-card class="pa-2">
         <v-data-table v-model:items-per-page="itemsPerPage" :headers="headers" :items="desserts" item-value="name"
-            class="elevation-1">
+            class="elevation-3">
         </v-data-table>
     </v-card>
 </template>

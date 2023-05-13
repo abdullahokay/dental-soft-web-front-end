@@ -6,73 +6,13 @@
         <v-container>
           <CardContainer lass="ma-0" />
         </v-container>
-        <v-container class="pa-9">
-          <v-row class="justify-center">
-            <v-col lg="12">
-              <v-card class="pa-2">
-                <v-row class="align-center justify-center py-2" no-gutters>
-                  <div class="d-flex align-center">
-                    <VCalendar v-if="this.theme.global.current.value.dark" view="weekly" title-position="left" is-dark />
-                    <VCalendar v-else view="weekly" title-position="left" />
-                  </div>
-                </v-row>
-                <v-divider class="border-opacity-25 mx-3 my-2"></v-divider>
-                <v-row no-gutters class="justify-center py-2">
-                  <v-col cols="3">
-                  <v-card class="d-flex justify-center align-center pa-4 calendar-randevu-wrapper" color="blue">
-                    <div class="d-flex flex-column text-left">
-                      <div class="text-p text-center">Tue</div>
-                      <div class="text-h3 text-left">16</div>
-                    </div>
-                    <v-spacer></v-spacer>
-                    <div class="d-flex flex-column justify-center text-left mx-5">
-                      <div class="text-h6">Dr. Rita Ora</div>
-                      <div class="text-p text-center">Dermatalogist</div>
-                      <div class="calendar-randevu-clock">
-                        <div class="text-h7 pa-1 text-left font-weight-bold">10:30</div>
-                      </div>
-                    </div>
-                  </v-card>
-                </v-col>
-                  <v-divider class="mx-3 my-2 border-opacity-25" vertical></v-divider>
-                  <v-col cols="3">
-                    <v-card class="d-flex justify-center align-center pa-4 calendar-randevu-wrapper" color="blue">
-                      <div class="d-flex flex-column text-left">
-                        <div class="text-p text-center">Tue</div>
-                        <div class="text-h3 text-left">16</div>
-                      </div>
-                      <v-spacer></v-spacer>
-                      <div class="d-flex flex-column justify-center text-center mx-5">
-                        <div class="text-h6">Dr. Rita Ora</div>
-                        <div class="text-p text-center">Dermatalogist</div>
-                        <div class="calendar-randevu-clock">
-                          <div class="text-h7 pa-1 text-left font-weight-bold">10:30</div>
-                        </div>
-                      </div>
-                    </v-card>
-                  </v-col>
-                  <v-divider class="mx-3 my-2 border-opacity-25" vertical></v-divider>
-                  <v-col cols="3">
-                  <v-card class="d-flex justify-center align-center pa-4 calendar-randevu-wrapper" color="blue">
-                    <div class="d-flex flex-column text-left">
-                      <div class="text-p text-center">Tue</div>
-                      <div class="text-h3 text-left">16</div>
-                    </div>
-                    <v-spacer></v-spacer>
-                    <div class="d-flex flex-column justify-center text-left mx-5">
-                      <div class="text-h6">Dr. Rita Ora</div>
-                      <div class="text-p text-center">Dermatalogist</div>
-                      <div class="calendar-randevu-clock">
-                        <div class="text-h7 pa-1 text-left font-weight-bold">10:30</div>
-                      </div>
-                    </div>
-                  </v-card>
-                </v-col>
-                </v-row>
-              </v-card>
-            </v-col>
-            <v-col cols="9" lg="12">
+        <v-container>
+          <v-row class="align-center justify-center">
+            <v-col xl="6" cols="9" lg="9" md="12" sm="12" class="py-3 xs-data-table" >
               <DataTable />
+            </v-col>
+            <v-col xl="3" lg="3" sm="12" class="px-2 py-2" fill-height>
+              <AppointmentCalendarContainer />
             </v-col>
           </v-row>
         </v-container>
@@ -85,6 +25,7 @@
 import CardContainer from './components/MainPageCardContainer.vue'
 import DataTable from './components/MainPageDataTable.vue'
 import AppBar from './components/AppBar.vue';
+import AppointmentCalendarContainer from './components/MainPageAppointment-CalendarContainer.vue';
 
 import { useTheme } from 'vuetify/lib/framework.mjs';
 
@@ -94,6 +35,8 @@ export default {
     AppBar,
     CardContainer,
     DataTable,
+    AppointmentCalendarContainer
+
     // VerticalNavBar,
   },
 
@@ -136,20 +79,9 @@ a:hover {
   background-color: #E0F7FA;
 }
 
-.app-wrapper {
-  margin: auto;
-}
-
-.calendar-randevu-clock {
-  background-color: white;
-  color: black;
-  max-width: fit-content;
-  border-radius: 10px;
-}
-
-.calendar-randevu-wrapper {
-  background-color: #2380EA;
-  color: white;
-  border-radius: 10px;
+@media screen and (max-width: 37.5rem) {
+  .xs-data-table {
+    display: none !important;
+  }
 }
 </style>
