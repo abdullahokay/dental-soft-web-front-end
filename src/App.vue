@@ -11,7 +11,6 @@
 
 <script>
 import AppBar from './components/AppBar.vue';
-
 import { useTheme } from 'vuetify/lib/framework.mjs';
 
 export default {

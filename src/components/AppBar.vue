@@ -17,9 +17,11 @@
                     <v-list-item prepend-icon="mdi-chart-line-variant" value="account" class="nav-list-item">Booking
                         Activity</v-list-item>
                 </RouterLink>
+                <RouterLink :to="{ name: 'patients' }">
+                    <v-list-item prepend-icon="mdi-card-account-details" value="patientDetails" class="nav-list-item">Hasta Detayları</v-list-item>
+                </RouterLink>
                 <v-list-item prepend-icon="mdi-wallet-bifold-outline" value="wallet"
                     class="nav-list-item">Wallet</v-list-item>
-                <v-list-item prepend-icon="mdi-cog" value="settings" class="nav-list-item">Settings</v-list-item>
             </div>
             <v-divider class="vertical-nav-divider"></v-divider>
             <div class="mt-7 px-5">
