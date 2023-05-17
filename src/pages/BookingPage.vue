@@ -1,6 +1,6 @@
 <template>
     <div class="booking">
-        <div class="text-h3 my-4 mx-3 text-left font-weight-black">Booking</div>
+        <div class="text-h3 my-4 mx-3 text-left font-weight-black">Randevular</div>
         <CardContainer />
     </div>
 </template>

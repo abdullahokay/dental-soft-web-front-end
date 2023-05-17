@@ -1,6 +1,6 @@
 <template>
     <div class="home">
-        <div class="text-h3 my-4 mx-8 text-left font-weight-black">Overview</div>
+        <div class="text-h3 my-4 mx-8 text-left font-weight-black">Genel Bakış</div>
         <v-container>
             <CardContainer lass="ma-0" />
         </v-container>

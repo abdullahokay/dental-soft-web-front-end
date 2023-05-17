@@ -1,6 +1,6 @@
 <template>
     <div class="patients">
-        <div class="text-h3 my-4 mx-7 text-left font-weight-black">Patients</div>
+        <div class="text-h3 my-4 mx-7 text-left font-weight-black">Hastalar</div>
         <v-container>
             <v-row class="align-center justify-center">
                 <v-col xl="6" lg="12" md="12" sm="12" class="py-3 xs-data-table">

@@ -11,11 +11,10 @@
             </v-list-item>
             <div class="mt-4 mb-7 px-5">
                 <RouterLink :to="{ name: 'home' }">
-                    <v-list-item prepend-icon="mdi-home-city" value="home" class="nav-list-item">Overview</v-list-item>
+                    <v-list-item prepend-icon="mdi-home-city" value="home" class="nav-list-item">Genel Bakış</v-list-item>
                 </RouterLink>
                 <RouterLink :to="{ name: 'booking' }">
-                    <v-list-item prepend-icon="mdi-chart-line-variant" value="account" class="nav-list-item">Booking
-                        Activity</v-list-item>
+                    <v-list-item prepend-icon="mdi-chart-line-variant" value="account" class="nav-list-item">Randevular</v-list-item>
                 </RouterLink>
                 <RouterLink :to="{ name: 'patients' }">
                     <v-list-item prepend-icon="mdi-card-account-details" value="patientDetails" class="nav-list-item">Hasta Detayları</v-list-item>

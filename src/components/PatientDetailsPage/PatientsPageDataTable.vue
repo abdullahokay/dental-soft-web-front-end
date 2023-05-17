@@ -9,7 +9,7 @@
                     <v-text-field class="mx-4" v-model="search" label="Search" single-line
                         hide-details style="background: none;" variant="outlined" prepend-inner-icon="mdi-magnify" density="compact" width="100px">
                     </v-text-field>
-                    <v-btn color="#13C56B" prepend-icon="mdi-plus" variant="tonal">Hasta Ekle</v-btn>
+                    <v-btn color="#13C56B" prepend-icon="mdi-plus" variant="flat" class="text-white font-weight-bold">Hasta Ekle</v-btn>
                 </v-toolbar>
                 <v-divider class="my-4"></v-divider>
             </template>
