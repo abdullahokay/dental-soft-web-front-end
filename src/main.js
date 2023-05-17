@@ -47,10 +47,7 @@ const vuetify = createVuetify({
 //vue-router
 import router from './router/router';
 
-//vuex
-// import store from "./store/store.js";
-
-//vue calendar
+//vue-calendar
 import VCalendar from 'v-calendar';
 import 'v-calendar/style.css';
 
