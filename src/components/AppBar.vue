@@ -2,15 +2,21 @@
     <v-navigation-drawer location="left" v-model="drawer">
         <v-list class="nav-list" density="comfortable" nav active-color="#2380EA">
             <v-list-item class="home-logo-wrapper">
-                <div class="d-flex justify-center align-center mr-5">
-                    <img src="../assets/logo.png" width="90" alt="logo" />
-                    <h1 class="home-title">Dental<br />Soft</h1>
-                </div>
+                <RouterLink :to="{ name: 'home' }">
+                    <div class="d-flex justify-center align-center mr-5">
+                        <img src="../assets/logo.png" width="90" alt="logo" />
+                        <h1 class="home-title">Dental<br />Soft</h1>
+                    </div>
+                </RouterLink>
             </v-list-item>
             <div class="mt-4 mb-7 px-5">
-                <v-list-item prepend-icon="mdi-home-city" value="home" class="nav-list-item">Overview</v-list-item>
-                <v-list-item prepend-icon="mdi-chart-line-variant" value="account" class="nav-list-item">Booking
-                    Activity</v-list-item>
+                <RouterLink :to="{ name: 'home' }">
+                    <v-list-item prepend-icon="mdi-home-city" value="home" class="nav-list-item">Overview</v-list-item>
+                </RouterLink>
+                <RouterLink :to="{ name: 'booking' }">
+                    <v-list-item prepend-icon="mdi-chart-line-variant" value="account" class="nav-list-item">Booking
+                        Activity</v-list-item>
+                </RouterLink>
                 <v-list-item prepend-icon="mdi-wallet-bifold-outline" value="wallet"
                     class="nav-list-item">Wallet</v-list-item>
                 <v-list-item prepend-icon="mdi-cog" value="settings" class="nav-list-item">Settings</v-list-item>
@@ -40,14 +46,14 @@
             </v-btn>
         </VExpandTransition>
         <v-btn icon @click="toggleTheme">
-                <Transition>
-                    <template v-if="this.theme.global.current.value.dark">
-                        <v-icon>mdi-weather-sunny</v-icon>
-                    </template>
-                    <template v-else>
-                        <v-icon >mdi-weather-night</v-icon>
-                    </template>
-                </Transition>
+            <Transition>
+                <template v-if="this.theme.global.current.value.dark">
+                    <v-icon>mdi-weather-sunny</v-icon>
+                </template>
+                <template v-else>
+                    <v-icon>mdi-weather-night</v-icon>
+                </template>
+            </Transition>
         </v-btn>
     </v-app-bar>
 </template>
@@ -109,25 +115,4 @@ export default {
 .theme-switch {
     max-width: max-content;
 }
-
-/* .v-enter-from {
-    opacity: 1
-}
-
-.v-enter-to {
-    opacity: .75
-}
-
-.v-enter-active,
-.v-leave-active {
-    transition: opacity 2s ease
-}
-
-.v-leave-from {
-    opacity: .5
-}
-
-.v-leave-to {
-    opacity: 0
-} */
 </style>

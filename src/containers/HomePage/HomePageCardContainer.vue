@@ -16,7 +16,7 @@
 </template>
 
 <script>
-import card from './MainPageCard.vue';
+import card from '../../components/HomePage/MainPageCard.vue'
 export default {
   name: 'CardContainer',
 

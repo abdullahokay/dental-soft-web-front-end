@@ -4,7 +4,7 @@
             <v-card class="px-5 py-5">
                 <v-sheet class="d-flex justify-center">
                     <v-sheet class="align-self-center">
-                        <v-btn :color="cardIconBgColor" icon class="mr-4" size="large">
+                        <v-btn :color="cardIconBgColor" icon class="mr-4 disable-events" size="large" :ripple="false">
                             <v-icon size="x-large" :color="cardIconColor">{{ cardIcon }}</v-icon>
                         </v-btn>
                     </v-sheet>
@@ -20,7 +20,7 @@
 
 <script>
 export default {
-    name: 'cardItem',
+    name: 'MainPageCard',
     data() {
         return {
 
@@ -89,5 +89,10 @@ export default {
         display: flex;
         justify-content: center;
     }
+}
+
+.disable-events {
+    pointer-events: painted !important;
+    cursor: default;
 }
 </style>

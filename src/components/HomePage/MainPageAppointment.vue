@@ -3,7 +3,7 @@
         <v-card class="d-flex justify-center pa-3 calendar-randevu-wrapper" color="blue">
             <div class="d-flex flex-column text-left justify-center">
                 <div class="text-p text-center">Tue</div>
-                <div class="text-h3 text-left">16</div>
+                <div class="text-h3 text-left">{{ date }}</div>
             </div>
             <v-spacer></v-spacer>
             <div class="d-flex flex-column justify-center text-left mr-2">
@@ -20,6 +20,11 @@
 <script>
 export default {
     name: "Appointment",
+    props: {
+        date: {
+            type: String
+        }
+    }
 }
 </script>
 

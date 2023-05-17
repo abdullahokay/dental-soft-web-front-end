@@ -10,6 +10,7 @@ import * as directives from "vuetify/directives";
 import * as labs from "vuetify/labs/components";
 import "material-design-icons-iconfont/dist/material-design-icons.css";
 import "@mdi/font/css/materialdesignicons.css";
+import "./style.css";
 
 const vuetify = createVuetify({
   components: {
@@ -44,7 +45,7 @@ const vuetify = createVuetify({
 });
 
 //vue-router
-// import router from "./router/router";
+import router from './router/router';
 
 //vuex
 // import store from "./store/store.js";
@@ -54,5 +55,7 @@ import VCalendar from 'v-calendar';
 import 'v-calendar/style.css';
 
 const app = createApp(App)
+app.use(router)
+app.use(vuetify)
 app.use(VCalendar, {})
-app.use(vuetify).mount("#app");
+app.mount('#app')
