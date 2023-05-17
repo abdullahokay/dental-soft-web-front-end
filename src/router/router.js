@@ -4,7 +4,7 @@ import Booking from '../pages/BookingPage.vue'
 
 const routes = [
   {
-    path: '/overview',
+    path: '/',
     name: 'home',
     component: Home,
   },
