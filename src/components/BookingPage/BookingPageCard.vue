@@ -52,8 +52,8 @@ export default {
 <style scoped>
 @media screen and (max-width: 37.5rem) {
     .xs-sc-card-column {
-        flex: 0 0 50%;
-        max-width: 50%;
+        flex: 0 0 100%;
+        max-width: 100%;
     }
 }
 
