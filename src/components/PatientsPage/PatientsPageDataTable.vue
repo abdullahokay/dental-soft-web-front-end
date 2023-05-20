@@ -1,23 +1,28 @@
 <template>
     <v-card class="pa-2">
-        <v-data-table v-model:items-per-page="itemsPerPage" :search="search" :headers="headers" :items="desserts" item-value="ad"
-            class="elevation-3">
+        <v-data-table v-model:items-per-page="itemsPerPage" :search="search" :headers="headers" :items="desserts"
+            item-value="ad" class="elevation-3">
             <template v-slot:top>
-                <v-toolbar flat :style="this.theme.global.current.value.dark ? {backgroundColor:'inherit'} : {backgroundColor:'white'}">
+                <v-toolbar flat
+                    :style="this.theme.global.current.value.dark ? { backgroundColor: 'inherit' } : { backgroundColor: 'white' }">
                     <div class="text-h6 text-left ml-4">Hastalar</div>
                     <v-spacer></v-spacer>
-                    <v-text-field class="mx-4" v-model="search" label="Search" single-line
-                        hide-details style="background: none;" variant="outlined" prepend-inner-icon="mdi-magnify" density="compact" width="100px">
+                    <v-text-field class="mx-4" v-model="search" label="Search" single-line hide-details
+                        style="background: none;" variant="outlined" prepend-inner-icon="mdi-magnify" density="compact"
+                        width="100px">
                     </v-text-field>
-                    <v-btn color="#13C56B" prepend-icon="mdi-plus" variant="flat" class="text-white font-weight-bold">Hasta Ekle</v-btn>
+                    <v-btn color="#13C56B" prepend-icon="mdi-plus" variant="flat" class="text-white font-weight-bold">Hasta
+                        Ekle</v-btn>
                 </v-toolbar>
                 <v-divider class="my-4"></v-divider>
             </template>
             <template v-slot:[`item.islem`]="{ item }">
                 <div class="d-flex justify-space-between text-center">
-                    <v-btn color="white" icon class="text-warning" size="small">
-                        <v-icon>mdi-lead-pencil</v-icon>
-                    </v-btn>
+                    <RouterLink :to="{ name: 'patient-detail' }">
+                        <v-btn color="white" icon class="text-warning" size="small">
+                            <v-icon>mdi-lead-pencil</v-icon>
+                        </v-btn>
+                    </RouterLink>
                     <v-btn color="white" icon class="text-error ml-2" size="small">
                         <v-icon>mdi-trash-can</v-icon>
                     </v-btn>
@@ -123,5 +128,4 @@ export default {
 
 .v-input {
     max-width: 200px;
-}
-</style>
+}</style>

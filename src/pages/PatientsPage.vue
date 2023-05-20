@@ -12,7 +12,7 @@
 </template>
 
 <script>
-import PatientsDataTable from '../components/PatientDetailsPage/PatientsPageDataTable.vue';
+import PatientsDataTable from '../components/PatientsPage/PatientsPageDataTable.vue';
 
 export default {
     name: "PatientsPage",
