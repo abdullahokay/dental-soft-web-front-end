@@ -1,10 +1,10 @@
 # Project Images
 ## Main Page
-![nav-header](resim/dental-soft-main-page.PNG)
+![main-page](resim/dental-soft-main-page.PNG)
 ## Appointments Page
-![about-us](resim/dental-soft-appointments.PNG)
+![appointments](resim/dental-soft-appointments.PNG)
 ## Patients Page
-![product-showcase](resim/dental-soft-patients.PNG)
+![patients](resim/dental-soft-patients.PNG)
 
 # Vue 3 + Vite
 
